@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 public class GreatingRepostory {
 
     public String sayHello() {
-        return "Hello gang of gang !!!!";
+        return " Gang of Five !!!!";
     }
 }
