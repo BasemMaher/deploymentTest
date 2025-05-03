@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
 public class GreatingRepostory {
 
     public String sayHello() {
-    return "Heloo Every Body !!!";
     }
 }
