@@ -1,6 +1,7 @@
 package com.basem.deploymentTest.Grating.Controller;
 
 import com.basem.deploymentTest.Grating.Service.GreatingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,16 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class GreatingController {
 
-private final GreatingService greatingService;
-
-    public GreatingController(GreatingService greatingService) {
-        this.greatingService = greatingService;
-    }
-
+    @Autowired
+    private GreatingService greetingService;
 
     @GetMapping("/great")
-    public String sayHello(){
-        return greatingService.sayHello();
+    public String great() {
+        return greetingService.sayHello();
     }
-
 }
